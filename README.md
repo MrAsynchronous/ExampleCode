@@ -12,3 +12,33 @@ This package was responsible for moving tremendous amounts of data through four 
 
 ## UtilityPanel
 
+By far one of the most useful packages created so far during my current employment at Supersocial. The UtilityPanel allows developers to write a small amount of code that can be executed from a client side GUI that's auto generated with Fusion at runtime.  Developers can create categories and actions in those categories.  The actions can have arguments with different types such as `string`, `boolean`, `Player`, `Vector3` and `Enum`.  The intuitive GUI lets the developer quickly and efficiently run debug functions to test their code.
+
+Here's an example snippet of code and what is rendered:
+```lua
+UtilityPanelService:CreatePanel("Main", Enum.KeyCode.Equals, function(panel)
+	panel:AddCategory("PlayerData", function(category)
+		category:AddAction("Print PlayerData", {
+			Variables = {
+				{Name = "Player", Type = "Player"}
+			},
+
+			Runner = function(player, variables)
+				print(PlayerDataService:GetPlayerProfile(variables.Player):GetMutableData())
+			end
+		})
+
+		category:AddAction("Print PlayerCacheValue", {
+			Variables = {
+				{Name = "Key", Type = "string"}
+			},
+
+			Runner = function(player, variables)
+				print(string.format("%s: %s", variables.Key, PlayerDataService:GetCacheValue(player, variables.Key)))
+			end
+		})
+	end)
+end)
+```
+
+![Example](./.img/UtilityPanel.png)
