@@ -41,4 +41,4 @@ UtilityPanelService:CreatePanel("Main", Enum.KeyCode.Equals, function(panel)
 end)
 ```
 
-![Example](./.img/UtilityPanel.png)
+![Example](../.img/UtilityPanel.png)
