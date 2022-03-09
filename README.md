@@ -18,6 +18,10 @@ This package was responsible for moving tremendous amounts of data through four 
 
 By far one of the most useful packages created so far during my current employment at Supersocial. The UtilityPanel allows developers to write a small amount of code that can be executed from a client side GUI that's auto generated with Fusion at runtime.  Developers can create categories and actions in those categories.  The actions can have arguments with different types such as `string`, `boolean`, `Player`, `Vector3` and `Enum`.  The intuitive GUI lets the developer quickly and efficiently run debug functions to test their code.  An example of this can be found in the README inside the UtilityPanel directory.
 
+## SchedulerService
+
+Created a solution for the issue of multiple services needing to execute certain tasks on a frequent basis.  Rather than create many different `RunService` connections or while loops, the Scheduler could create one connection and execute each task like a cron job.  The Scheduler is simple and easy to use with no extra functionality bloat.
+
 ## PromoCodeService
 
 The server component of the PromoCode package.  The goal of this package was to write a single, bulletproof promotional code (Twitter code) package that all games at Supersocial could use.  This was to not only remove the need for the game teams` to reinvent the wheel, but to give identical and consistent behavior between the games.  This package was also paired with the creation of a PromoCodeManager plugin, imaged below.  This plugin allowed developers and people with little technical knowledge to create and edit promotional codes.
