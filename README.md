@@ -22,4 +22,4 @@ By far one of the most useful packages created so far during my current employme
 
 The server component of the PromoCode package.  The goal of this package was to write a single, bulletproof promotional code (Twitter code) package that all games at Supersocial could use.  This was to not only remove the need for the game teams` to reinvent the wheel, but to give identical and consistent behavior between the games.  This package was also paired with the creation of a PromoCodeManager plugin, imaged below.  This plugin allowed developers and people with little technical knowledge to create and edit promotional codes.
 
-![PromoCodeManager](../.img/PromoCodeManager.png)
+![PromoCodeManager](./.img/PromoCodeManager.png)
